@@ -3,28 +3,14 @@ import { render } from 'react-dom';
 import Pet from './Pet';
 
 const App = () => {
-  return React.createElement(
-    'div', // what kind of tag is it
-    { id: 'something-important' }, // its for attributes
-    [
-      React.createElement('h1', {}, 'Adopt me !'),
-      React.createElement(Pet, {
-        name: 'Luna',
-        animal: 'Dog',
-        breed: 'Havanese',
-      }),
-      React.createElement(Pet, {
-        name: 'Pepper',
-        animal: 'Bird',
-        breed: 'Cockatiel',
-      }),
-      React.createElement(Pet, {
-        name: 'Doink',
-        animal: 'Cat',
-        breed: 'Mixed',
-      }),
-    ] // children whatever we want to pass in
+  return (
+    <div>
+      <h1 id="something-important">Adopt me!</h1>
+      <Pet name="Lune" animal="Dog" breed="Havanese" />
+      <Pet name="Pepper" animal="Bird" breed="Cockatiel" />
+      <Pet name="Doink" animal="Cat" breed="M" />
+    </div>
   );
 };
 
-render(React.createElement(App), document.getElementById('root'));
+render(<App />, document.getElementById('root'));
